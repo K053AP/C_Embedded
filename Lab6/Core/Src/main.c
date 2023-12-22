@@ -61,6 +61,8 @@ DMA_HandleTypeDef hdma_spi3_tx;
 
 /* USER CODE BEGIN PV */
 
+int16_t dataI2S[100] = {0};
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -243,6 +245,12 @@ int main(void)
   MX_I2C1_Init();
   MX_I2S3_Init();
   /* USER CODE BEGIN 2 */
+
+  // Init DAC
+  CS43L22_Init();
+
+  // Transmit empty data
+  HAL_I2S_Transmit_DMA(&hi2s3, (uint16_t *)dataI2S, 100);
 
   /* USER CODE END 2 */
 
