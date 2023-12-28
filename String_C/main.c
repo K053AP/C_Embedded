@@ -25,7 +25,7 @@ int main() {
     printf("Result text in int: %d\n", result_int);
 
 
-    //Старий код я вирішив залишити
+    //РЎС‚Р°СЂРёР№ РєРѕРґ СЏ РІРёСЂС–С€РёРІ Р·Р°Р»РёС€РёС‚Рё
     char input_text[100];
     char result_text[1000] = "";
 
