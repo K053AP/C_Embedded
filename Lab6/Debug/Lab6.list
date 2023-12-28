@@ -43,11 +43,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  19 .debug_line   0000d1bd  00000000  00000000  0004c53d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    000c0d7a  00000000  00000000  000596fa  2**0
+ 20 .debug_str    000c0d7e  00000000  00000000  000596fa  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_frame  000025f8  00000000  00000000  0011a474  2**2
+ 21 .debug_frame  000025f8  00000000  00000000  0011a478  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 00000053  00000000  00000000  0011ca6c  2**0
+ 22 .debug_line_str 00000057  00000000  00000000  0011ca70  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -668,43 +668,43 @@ void CS43L22_Beep(soundToneType pitch, uint32_t duration_ms)
  80006b0:	080006b5 	.word	0x080006b5
 	{
 		case A5:
-			TxBuffer[1] = 0x06;		// Value (frequency and on time)
- 80006b4:	2306      	movs	r3, #6
+			TxBuffer[1] = 0x60;		// Value (frequency and on time)
+ 80006b4:	2360      	movs	r3, #96	; 0x60
  80006b6:	737b      	strb	r3, [r7, #13]
 			break;
  80006b8:	e011      	b.n	80006de <CS43L22_Beep+0x7a>
 
 		case C5:
-			TxBuffer[1] = 0x01;		// Value (frequency and on time)
- 80006ba:	2301      	movs	r3, #1
+			TxBuffer[1] = 0x10;		// Value (frequency and on time)
+ 80006ba:	2310      	movs	r3, #16
  80006bc:	737b      	strb	r3, [r7, #13]
 			break;
  80006be:	e00e      	b.n	80006de <CS43L22_Beep+0x7a>
 
 		case D5:
-			TxBuffer[1] = 0x02;		// Value (frequency and on time)
- 80006c0:	2302      	movs	r3, #2
+			TxBuffer[1] = 0x20;		// Value (frequency and on time)
+ 80006c0:	2320      	movs	r3, #32
  80006c2:	737b      	strb	r3, [r7, #13]
 			break;
  80006c4:	e00b      	b.n	80006de <CS43L22_Beep+0x7a>
 
 		case E5:
-			TxBuffer[1] = 0x03;		// Value (frequency and on time)
- 80006c6:	2303      	movs	r3, #3
+			TxBuffer[1] = 0x30;		// Value (frequency and on time)
+ 80006c6:	2330      	movs	r3, #48	; 0x30
  80006c8:	737b      	strb	r3, [r7, #13]
 			break;
  80006ca:	e008      	b.n	80006de <CS43L22_Beep+0x7a>
 
 		case F5:
-			TxBuffer[1] = 0x04;		// Value (frequency and on time)
- 80006cc:	2304      	movs	r3, #4
+			TxBuffer[1] = 0x40;		// Value (frequency and on time)
+ 80006cc:	2340      	movs	r3, #64	; 0x40
  80006ce:	737b      	strb	r3, [r7, #13]
 			break;
  80006d0:	e005      	b.n	80006de <CS43L22_Beep+0x7a>
 
 		case G5:
-			TxBuffer[1] = 0x05;		// Value (frequency and on time)
- 80006d2:	2305      	movs	r3, #5
+			TxBuffer[1] = 0x50;		// Value (frequency and on time)
+ 80006d2:	2350      	movs	r3, #80	; 0x50
  80006d4:	737b      	strb	r3, [r7, #13]
 			break;
  80006d6:	e002      	b.n	80006de <CS43L22_Beep+0x7a>

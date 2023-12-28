@@ -167,27 +167,27 @@ void CS43L22_Beep(soundToneType pitch, uint32_t duration_ms)
 	switch (pitch)
 	{
 		case A5:
-			TxBuffer[1] = 0x06;		// Value (frequency and on time)
+			TxBuffer[1] = 0x60;		// Value (frequency and on time)
 			break;
 
 		case C5:
-			TxBuffer[1] = 0x01;		// Value (frequency and on time)
+			TxBuffer[1] = 0x10;		// Value (frequency and on time)
 			break;
 
 		case D5:
-			TxBuffer[1] = 0x02;		// Value (frequency and on time)
+			TxBuffer[1] = 0x20;		// Value (frequency and on time)
 			break;
 
 		case E5:
-			TxBuffer[1] = 0x03;		// Value (frequency and on time)
+			TxBuffer[1] = 0x30;		// Value (frequency and on time)
 			break;
 
 		case F5:
-			TxBuffer[1] = 0x04;		// Value (frequency and on time)
+			TxBuffer[1] = 0x40;		// Value (frequency and on time)
 			break;
 
 		case G5:
-			TxBuffer[1] = 0x05;		// Value (frequency and on time)
+			TxBuffer[1] = 0x50;		// Value (frequency and on time)
 			break;
 
 		// Assume C4 for all other cases
